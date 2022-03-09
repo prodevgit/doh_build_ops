@@ -1,0 +1,278 @@
+{% load i18n %}
+{% load static %}
+{% load tags %}
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+	<!--[if gte mso 9]>
+	<xml>
+		<o:OfficeDocumentSettings>
+		<o:AllowPNG/>
+		<o:PixelsPerInch>96</o:PixelsPerInch>
+		</o:OfficeDocumentSettings>
+	</xml>
+	<![endif]-->
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="format-detection" content="date=no" />
+	<meta name="format-detection" content="address=no" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="x-apple-disable-message-reformatting" />
+    <!--[if !mso]><!-->
+    <!--<![endif]-->
+	<title>Email Template</title>
+	<!--[if gte mso 9]>
+	<style type="text/css" media="all">
+		sup { font-size: 100% !important; }
+	</style>
+	<![endif]-->
+	
+
+	<style type="text/css" media="screen">
+		/* Linked Styles */
+		body { padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#1e52bd; -webkit-text-size-adjust:none }
+		a { color:#000001; text-decoration:none }
+		p { padding:0 !important; margin:0 !important } 
+		img { -ms-interpolation-mode: bicubic; /* Allow smoother rendering of resized image in Internet Explorer */ }
+		
+		/* Mobile styles */
+		@media only screen and (max-device-width: 480px), only screen and (max-width: 480px) {
+			.mobile-shell { width: 100% !important; min-width: 100% !important; }
+			.link { color: #115CAA; }
+
+			.center { margin: 0 auto !important; }
+			.content2 { padding: 8px 15px 12px !important; }
+			.t-left { float: left !important; margin-right: 30px !important; }
+			.t-left-2  { float: left !important; }
+			
+			.td { width: 100% !important; min-width: 100% !important; }
+
+			.m-br-15 { height: 15px !important; }
+			.m-br-30 { height: 30px !important; }
+			.mpb5 { padding-bottom: 5px !important; }
+			.mpb15 { padding-bottom: 15px !important; }
+			.mpb20 { padding-bottom: 20px !important; }
+			.mpb30 { padding-bottom: 30px !important; }
+			.m-padder { padding: 0px 15px !important; }
+			.m-padder2 { padding-left: 15px !important; padding-right: 15px !important; }
+			.p70 { padding: 30px 0px !important; }
+			.pt70 { padding-top: 30px !important; }
+			.p0-15 { padding: 0px 15px !important; }
+			.p20-15 { padding: 20px 15px !important; }			
+			.p20-15-0 { padding: 20px 15px 0px 15px !important; }			
+			.p0-15-20 { padding: 0px 15px 20px 15px !important; }			
+		}
+	</style>
+</head>
+<body class="body"style="padding:0 !important; margin:0 !important; display:block !important; min-width:100% !important; width:100% !important; background:#f6f6f6; -webkit-text-size-adjust:none;">
+	<div style="{% if language_is_rtl %}direction:rtl{% else %}direction:ltr{% endif %};">
+	{% if language_is_rtl %}
+		{% firstof "right" as alignment %}
+	{% else %}
+		{% firstof "left" as alignment %}
+	{% endif %}
+
+	<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f6f6f6">
+		<tr>
+			<td align="center" valign="top">
+				<!-- Email Content -->
+				<table width="650" border="0" cellspacing="0" cellpadding="0" class="mobile-shell">
+					<tr>
+						<td height="50" style="height: 50px;">
+						</td>
+					</tr>
+					<tr>
+						<td class="td" style="width:600px; min-width:600px; font-size:0pt; line-height:0pt; padding:0; margin:0; font-weight:normal;">
+							<!-- Header -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<!-- Logo -->
+								<tr>
+									<td bgcolor="#ffffff" class="p20-15 img-left" style="padding: 20px; font-size:0pt; line-height:0pt; text-align:{{alignment}};"><a href="#" target="_blank"><img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/logo.png" width="95" height="22" border="0" alt="" /></a></td>
+								</tr>
+								<!-- END Logo -->
+							</table>
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#ebebeb">
+								<!-- Title -->
+								
+								{% if language_is_rtl %}
+
+								<tr align=right>
+									<td bgcolor="#003B6D" class="p20-15" style="padding: 15px 20px 12px; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; font-weight: bold; color: #ffffff; text-align:{{alignment}}; background-color: #003B6D;">{% trans "Notification from Auraa" %}</td>
+								</tr>
+								{% else %}
+								<tr align=left>
+									<td bgcolor="#003B6D" class="p20-15" style="padding: 15px 20px 12px; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; font-weight: bold; color: #ffffff; text-align:{{alignment}}; background-color: #003B6D;">{% trans "Notification from Auraa" %}</td>
+								</tr>
+								{% endif %} 								
+								{% comment %} <tr>
+									<td bgcolor="#003B6D" class="p20-15" style="padding: 15px 20px 12px; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:18px; line-height:22px; font-weight: bold; color: #ffffff; text-align:center; background-color: #003B6D;">{% trans "Notification from Auraa" %}</td>
+								</tr> {% endcomment %}
+								<!-- END Title -->
+							</table>
+							<!-- END Header -->
+
+							
+							<!-- Content -->
+								{{EMAIL_MESSAGE_HTML}}
+							<!-- END Content -->
+
+
+							<!-- Footer -->
+							<table width="100%" border="0" cellspacing="0" cellpadding="0">
+								<tr>
+									<td height="20" style="height: 20px;"></td>
+								</tr>
+								<tr>
+								{% if language_is_rtl%}
+
+								<tr>
+									<td class="text-footer2" style="color:#115CAA; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:22px; text-align:{{alignment}};">
+								</tr>
+								{% else %}
+								<tr>
+									<td class="text-footer2" style="color:#115CAA; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:22px; text-align:{{alignment}};">
+								</tr>
+								{% endif %}
+								
+									{% comment %} <td class="text-footer2" style="color:#115CAA; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:22px; text-align:center;"> {% endcomment %}
+										<a href="#" target="_blank" class="link" style="color:#115CAA; text-decoration:none;"><span class="link"style="color:#115CAA; text-decoration:none;">{% trans "Unsubscribe" %}</span></a>
+										&nbsp; | &nbsp; 
+										<a href="#" target="_blank" class="link" style="color:#115CAA; text-decoration:none;"><span class="link"style="color:#115CAA; text-decoration:none;">{% trans "Help" %}</span></a>
+									</td>
+								</tr>
+								<tr>
+									<td height="20" style="height: 20px;"></td>
+								</tr>
+								<tr>
+								{% if language_is_rtl%}
+
+								<tr>
+									<td class="text-left"style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">{% trans "Download your Auraa app now." %}</td>
+								</tr>
+								{% else %}
+								<tr><td style="color:#115CAA;">hello{{language_is_rtl}}</td></tr>
+								<tr>
+									<td class="text-left"style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">{% trans "Download your Auraa app now." %}</td>
+								</tr>
+								{% endif %}
+									{% comment %} <td class="text-left"style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:center; padding-bottom:10px;">{% trans "Download your Auraa app now." %}</td> {% endcomment %}
+								</tr>
+								
+								<tr>
+								{% if language_is_rtl%}
+
+								
+									<td width="90" align={{alignment}} style="margin:0; width:90px;">
+									<span>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/app-store-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/google-play-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+											</span>
+											</td>
+								
+								{% else %}
+								
+									<td width="90" align={{alignment}} style="margin:0; width:90px;">
+									<span>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/app-store-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/google-play-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+											</span>
+											</td>
+								
+								{% endif %}
+									{% comment %} <td width="90" align=right style="margin:0; width:90px;"> {% endcomment %}
+										{% comment %} <span>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/app-store-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+										<a href="#" target="_blank" class="link-white"style="color:#115CAA; text-decoration:none;">
+                                                        <img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/google-play-badge.png" alt="" style="width:84px; height:25px; display:inline-block;border:0;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;" width="150">
+                                                    </a>
+											</span>
+									</td> {% endcomment %}
+									
+								</tr>
+								<tr>
+									<td class="m-br-30" style="height: 30px;">
+									</td>
+								</tr>
+								<tr>
+								{% if language_is_rtl%}
+
+								<tr>
+									<td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">
+										{% trans "You are receiving Auraa notification emails." %} <br/>
+								</tr>
+								{% else %}
+								<tr>
+									<td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">
+										{% trans "You are receiving Auraa notification emails." %} <br/>
+								</tr>
+								{% endif %}
+									{% comment %} <td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:center; padding-bottom:10px;">
+										{% trans "You are receiving Auraa notification emails." %} <br/> {% endcomment %}
+									{% comment %} </td> {% endcomment %}
+								</tr>
+								<tr>
+								{% if language_is_rtl%}
+
+								<tr>
+									<td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">
+										{% trans "© 2020 Auraa. Auraa is a registered business name of Auraa USA Unlimited Company." %} <br/>
+										{% trans "Auraa and the Auraa logo are registered trademarks of Auraa." %}
+								</tr>
+								{% else %}
+								<tr>
+									<td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:{{alignment}}; padding-bottom:10px;">
+										{% trans "© 2020 Auraa. Auraa is a registered business name of Auraa USA Unlimited Company." %} <br/>
+										{% trans "Auraa and the Auraa logo are registered trademarks of Auraa." %}
+								</tr>
+								{% endif %}
+									{% comment %} <td class="text" style="color:#8e8e93; font-family: 'Calibri', Helvetica, Arial, sans-serif; font-size:12px; line-height:18px; text-align:center; padding-bottom:10px;">
+										{% trans "© 2020 Auraa. Auraa is a registered business name of Auraa USA Unlimited Company." %} <br/>
+										{% trans "Auraa and the Auraa logo are registered trademarks of Auraa." %} {% endcomment %}
+									{% comment %} </td> {% endcomment %}
+								</tr>
+								<!-- Logo -->
+								<tr>
+									<td class="img-left" style="font-size:0pt; line-height:0pt; text-align:{{alignment}};"><a href="#" target="_blank"><img src="https://auraa-net-dev.s3.amazonaws.com/static/assets/img/logo.png" width="60" height="15" border="0" alt="" /></a></td>
+								</tr>
+								<!-- END Logo -->
+								<tr>
+									<td height="20" style="height: 20px;">
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#003B6D" height="10" style="height: 10px; background-color: #003B6D;">
+									</td>
+								</tr>
+							</table>
+							<!-- END Footer -->
+
+						</td>
+					</tr>
+					<tr>
+						<td height="50" style="height: 50px;">
+						</td>
+					</tr>
+				</table>
+				<!-- END mail Content -->
+			</td>
+		</tr>
+	</table>
+</div>	
+</body>
+</html>
+
